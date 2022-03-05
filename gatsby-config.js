@@ -1,6 +1,8 @@
+const site_title = `Jubilo Iwata Supporter's Blogs`
+
 module.exports = {
   siteMetadata: {
-    title: `Summary of Jubilo Blog`,
+    title: site_title,
     description: `This site is a summary of Jubilo Iwata Blog`,
     author: `Towa`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
@@ -29,6 +31,20 @@ module.exports = {
         // theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+              rel: "nofollow noreferrer"
+            },
+          },
+        ],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
