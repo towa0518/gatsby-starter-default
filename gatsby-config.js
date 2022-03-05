@@ -1,11 +1,14 @@
 const site_title = `Jubilo Iwata Supporter's Blogs`
+const site_author = `SAKASHU`
+const twitter_link = "https://twitter.com/SAKASHU9"
 
 module.exports = {
   siteMetadata: {
     title: site_title,
     description: `This site is a summary of Jubilo Iwata Blog`,
-    author: `Towa`,
+    author: site_author,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    twitterLink: twitter_link
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
